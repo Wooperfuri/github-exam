@@ -53,3 +53,29 @@ for i in range(4):
         expenses.append([cat, desc, amount, alert])
     else:
         print("Invalid category. Skipping entry.")
+# Compute totals
+total = 0
+for e in expenses:
+    total += e[2]
+
+remaining = budget - total
+
+if remaining >= 0:
+    status = "Budget OK! Keep it up."
+else:
+    status = "Overspent! Reduce spending."
+
+# Display report
+print("\n======================================================")
+print(f"Student name: {name}")
+print(f"Weekly budget: {budget:.0f}\n")
+
+for i, e in enumerate(expenses, start=1):
+    cat_name = categories[e[0] - 1]
+    print(f"{i}. {cat_name} | {e[1]} | {e[2]:.0f} {e[3]}")
+
+print("\n------------------------------------------------------")
+print(f"Total spent: {total:.0f}")
+print(f"Remaining balance: {remaining:.0f}")
+print(f"Status: {status}")
+print("======================================================")
