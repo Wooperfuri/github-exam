@@ -1,4 +1,4 @@
-# Expense Tracker Program
+# EXPENSE TRACKER PROGRAM (FINAL VERSION WITH STRIP)
 
 categories = [
     "Food & Drinks",
@@ -15,3 +15,7 @@ examples = [
     "[e.g. Notebook, pen, bond paper]",
     "[e.g. Games, movies, hangout]"
 ]
+
+# -----------------------------
+# GET STUDENT NAME
+# -----------------------------
