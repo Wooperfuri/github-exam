@@ -39,31 +39,3 @@ while True:
 # -----------------------------
 # GET WEEKLY BUDGET (WITH STRIP)
 # -----------------------------
-while True:
-    budget_input = input("Enter weekly budget: ").strip()
-
-    if budget_input == "":
-        print("Budget cannot be empty. Try again.")
-    else:
-        valid_budget = True
-        dot_count = 0
-
-        i = 0
-        while i < len(budget_input):
-            ch = budget_input[i]
-
-            if ch == ".":
-                dot_count = dot_count + 1
-                if dot_count > 1:
-                    valid_budget = False
-
-            elif not (ch >= "0" and ch <= "9"):
-                valid_budget = False
-
-            i = i + 1
-
-        if valid_budget == True:
-            budget = float(budget_input)
-            break
-        else:
-            print("Invalid budget. Numbers only (spaces auto-fixed).")
