@@ -1,4 +1,4 @@
- #Expense Tracker Program
+# Expense Tracker Program
 
 # Ask for student details
 name = input("Student name: ")
