@@ -144,4 +144,38 @@ while entry_count < 4:
         expenses.append([categories[cat_num - 1], description, amount, alert])
 
         entry_count = entry_count + 1
-        
+# -----------------------------
+# CALCULATIONS
+# -----------------------------
+total = 0
+
+for item in expenses:
+    total = total + item[2]
+
+remaining = budget - total
+
+# -----------------------------
+# REPORT
+# -----------------------------
+print("\n==================== REPORT ====================")
+print("Student Name:", name)
+print("Weekly Budget:", budget)
+
+print("\nExpenses:")
+
+count = 1
+
+for item in expenses:
+    print(str(count) + ". " + item[0] + " - " + item[1] + " - " + str(item[2]) + " " + item[3])
+    count = count + 1
+
+print("\nTotal Spent:", total)
+print("Remaining Balance:", remaining)
+
+if remaining >= 0:
+    print("Budget OK! Keep it up.")
+else:
+    print("Overspent! Reduce spending.")
+
+print("================================================")
+
